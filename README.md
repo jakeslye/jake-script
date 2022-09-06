@@ -24,7 +24,7 @@ mov r!0 50
 //start loop. if register 50 == 0
 com r!50 0
 jmp 5
-//subtract 1 from register 50 and pring
+//subtract 1 from register 50 and print
 sub r!50 1
 mov r!1 50
 dbg r!50
