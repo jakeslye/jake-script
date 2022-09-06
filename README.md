@@ -1,5 +1,5 @@
 # jake-script
-Looks like assembly. Is definitely not assembly.  
+Looks like assembly. Runs like javascript.  
 
 ## Docs
 Live demo: https://demo.jakethethe1.repl.co/  
