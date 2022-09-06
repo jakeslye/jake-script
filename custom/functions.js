@@ -11,15 +11,28 @@ function opentab(peramiters){
 }
 
 function alr(peramiters){
-    alert(peramiters[0]);
+    var text = "";
+    for(var i=0; i<peramiters.length; i++){
+        text += peramiters[i] + " ";
+    }
+    alert(text);
 }
 
 function input(peramiters){
-    var text = prompt(peramiters[0]);
-    setReg(5, text);
+    var text = "";
+    for(var i=0; i<peramiters.length; i++){
+        text += peramiters[i] + " ";
+    }
+    var message = prompt(text);
+    setReg(5, message);
+}
+
+function rad(peramiters){
+    run("dbg " + peramiters[0])
 }
 
 registerFunction("opentab", opentab);
 registerFunction("inp", input);
 registerFunction("alert", alr);
 registerFunction("dbg", dbg);
+registerFunction("rad", rad);
