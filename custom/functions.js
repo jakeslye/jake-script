@@ -1,16 +1,13 @@
-//varibles
-// var varibles = new Map();
-// function define(peramiters){
-//     varibles.set(peramiters[0], peramiters[1]);
-// }
-// function get(peramiters){
-//     registers[6] = varibles.get(peramiters[0]);
-// }
-// registerFunction("def", define);
-// registerFunction("get", get);
-
 function dbg(peramiters){
-    $("#console").append(peramiters[0] + "<br>");
+    var message = "";
+    for(var i=0; i<peramiters.length; i++){
+        message += peramiters[i] + " ";
+    }
+    $("#console").append(message + "<br>");
+}
+
+function opentab(peramiters){
+    window.open(peramiters[0], "_blank");
 }
 
 function alr(peramiters){
@@ -22,6 +19,7 @@ function input(peramiters){
     setReg(5, text);
 }
 
+registerFunction("opentab", opentab);
 registerFunction("inp", input);
 registerFunction("alert", alr);
 registerFunction("dbg", dbg);
