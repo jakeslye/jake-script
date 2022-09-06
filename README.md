@@ -1,5 +1,9 @@
 # jake-script
-Looks like assembly. Is definitely not assembly.
+Looks like assembly. Is definitely not assembly.  
+
+## Docs
+Live demo: https://demo.jakethethe1.repl.co/  
+Docs: https://demo.jakethethe1.repl.co/docs.html
 
 ## Example Code
 Counts too a number inputed then counts down to 0.
