@@ -2,8 +2,8 @@
 Looks like assembly. Is definitely not assembly.  
 
 ## Docs
-Live demo: https://demo.jakethethe1.repl.co/  
-Docs: https://demo.jakethethe1.repl.co/docs.html
+Live demo: <a href="https://demo.jakethethe1.repl.co/" target="_blank">demo.jakethethe1.repl.co</a>  
+Docs: <a href="https://demo.jakethethe1.repl.co/docs.html" target="_blank">demo.jakethethe1.repl.co/docs.html</a>
 
 ## Example Code
 Counts too a number inputed then counts down to 0.
