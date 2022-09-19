@@ -79,22 +79,6 @@ function run(code){
   }
 }
 
-function registerFunction(name, callback){
-  functions.set(name, callback);
-}
-
-function setReg(reg, value){
-  registers[reg] = value;
-}
-
-function getReg(reg){
-  return registers[reg];
-}
-
-function debug(text){
-  $("#debug").append(text + "<br>");
-}
-
 function splice(script){
   var instruction = "";
   var peramiters = [];
@@ -124,4 +108,22 @@ function splice(script){
     if(debugging) debug(`peramiters ${i}: ${peramiters[i]}`);
   }
   return {instruction: instruction, peramiters: peramiters};
+}
+
+
+//Intergrations for custom functions
+function registerFunction(name, callback){
+  functions.set(name, callback);
+}
+
+function setReg(reg, value){
+  registers[reg] = value;
+}
+
+function getReg(reg){
+  return registers[reg];
+}
+
+function debug(text){
+  $("#debug").append(text + "<br>");
 }
