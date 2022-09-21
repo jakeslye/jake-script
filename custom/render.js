@@ -18,6 +18,6 @@ function draw(peramiters){
     ctx.rect(peramiters[0], peramiters[1], peramiters[2], peramiters[3]);
     ctx.fill();
 }
-render.set("render.draw", setup);
+render.set("render.draw", draw);
 
 registerLibrary("render", render);
