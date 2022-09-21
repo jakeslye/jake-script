@@ -47,3 +47,7 @@ render.draw 20 20 5 5 black
 render.draw 60 20 5 5 black
 render.draw 10 50 65 5 red
 ```
+## TODO
+1. Add timers to util library. 
+2. Recode compiler.
+3. Seperate system functions from the compiler.
