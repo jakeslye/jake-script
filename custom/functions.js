@@ -1,3 +1,5 @@
+var utils = new Map();
+//Print function. Prints peramtiers to console.
 function dbg(peramiters){
     var message = "";
     for(var i=0; i<peramiters.length; i++){
@@ -5,11 +7,9 @@ function dbg(peramiters){
     }
     $("#console").append(message + "<br>");
 }
+utils.set("dbg", dbg);
 
-function opentab(peramiters){
-    window.open(peramiters[0], "_blank");
-}
-
+//Send an alert
 function alr(peramiters){
     var text = "";
     for(var i=0; i<peramiters.length; i++){
@@ -17,7 +17,9 @@ function alr(peramiters){
     }
     alert(text);
 }
+utils.set("alert", alr);
 
+//Open a inputbox
 function input(peramiters){
     var text = "";
     for(var i=0; i<peramiters.length; i++){
@@ -26,13 +28,8 @@ function input(peramiters){
     var message = prompt(text);
     setReg(5, message);
 }
+utils.set("inp", input);
 
-function rad(peramiters){
-    run("dbg " + peramiters[0])
-}
+registerLibrary("utils", utils);
 
-registerFunction("opentab", opentab);
-registerFunction("inp", input);
-registerFunction("alert", alr);
-registerFunction("dbg", dbg);
-registerFunction("rad", rad);
+//registerFunction("dbg", dbg);
