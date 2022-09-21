@@ -1,5 +1,6 @@
 var librarys = new Map();
 var functions = new Map();
+var functionsBackup = new Map();
 var LANG_INSTRUCTIONS = ["set", "com", "mov", "add", "sub", "jmp", "using"]
 var registers = [0, 0, 0, 0];
 var offset = 0;
@@ -13,6 +14,7 @@ var debugging = $("#debugging").is(":checked");
 var logs = $("#logs").is(":checked");
 
 function run(code){
+  functionsBackup = functions;
   debugging = $("#debugging").is(":checked");
   logs = $("#logs").is(":checked");
   registers = [0, 0, 0, 0];
@@ -35,8 +37,9 @@ function run(code){
       if(line.instruction == "using"){
         if(librarys.has(line.peramiters[0])){
           functions = new Map([...functions, ...librarys.get(line.peramiters[0])]);
+          if(debugging) debug(`<b>Imported:</b> Successfully imported library: "${line.peramiters[0]}" | Line: ${i}`);
         }else{
-          debug("<b>FAIL: </b> Cannot find library. Line: " + i);
+          debug(`<b>FAIL: </b> Cannot find library "${line.peramiters[0]}". Line: ${i}`);
           break;
         }
       }
@@ -86,6 +89,7 @@ function run(code){
       }
     }
   }
+  functions  = functionsBackup;
 }
 
 function splice(script){
