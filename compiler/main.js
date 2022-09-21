@@ -1,5 +1,6 @@
+var librarys = new Map();
 var functions = new Map();
-var LANG_INSTRUCTIONS = ["set", "com", "mov", "add", "sub", "jmp"]
+var LANG_INSTRUCTIONS = ["set", "com", "mov", "add", "sub", "jmp", "using"]
 var registers = [0, 0, 0, 0];
 var offset = 0;
 /*
@@ -31,6 +32,14 @@ function run(code){
     if(debugging) debug(`<br> lines[${i}]: ${lines[i]}`);
     var line = splice(lines[i]);
     if(LANG_INSTRUCTIONS.includes(line.instruction)){
+      if(line.instruction == "using"){
+        if(librarys.has(line.peramiters[0])){
+          functions = new Map([...functions, ...librarys.get(line.peramiters[0])]);
+        }else{
+          debug("<b>FAIL: </b> Cannot find library. Line: " + i);
+          break;
+        }
+      }
       if(line.instruction == "add"){
         registers[0] = Number(line.peramiters[0]) + Number(line.peramiters[1]);
       }
@@ -114,6 +123,10 @@ function splice(script){
 //Intergrations for custom functions
 function registerFunction(name, callback){
   functions.set(name, callback);
+}
+
+function registerLibrary(name, map){
+  librarys.set(name, map);
 }
 
 function setReg(reg, value){
