@@ -6,8 +6,9 @@ Live demo: https://demo.jakethethe1.repl.co/
 Docs: https://demo.jakethethe1.repl.co/docs.html
 
 ## Example Code
-Counts too a number inputed then counts down to 0.
+### Counts too a number inputed then counts down to 0.
 ```
+using utils
 //get input
 inp number:
 //start loop. if add == input
@@ -31,4 +32,16 @@ dbg r!50
 jmp -5
 //finish loop
 dbg sub_is_done
+```
+### Draw a face with the render library.
+```
+using render
+render.setup
+render.draw 0 0 85 65 #8d5524
+render.draw 0 65 85 65 blue
+render.draw 10 10 25 25 white
+render.draw 50 10 25 25 white
+render.draw 20 20 5 5 black
+render.draw 60 20 5 5 black
+render.draw 10 50 65 5 red
 ```
