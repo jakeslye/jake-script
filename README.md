@@ -51,3 +51,4 @@ render.draw 10 50 65 5 red
 1. Add timers to util library. 
 2. Recode compiler.
 3. Seperate system functions from the compiler.
+4. Rework register system. Maybe seperate registers for storage and libraries or allow each library to have its own set of registers.
