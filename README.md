@@ -3,7 +3,9 @@ Looks like assembly. Runs like javascript.
 
 ## Docs
 Live demo: https://demo.jakethethe1.repl.co/  
-Docs: https://demo.jakethethe1.repl.co/docs.html
+Docs: https://demo.jakethethe1.repl.co/docs.html  
+Util library: https://demo.jakethethe1.repl.co/utils.html  
+Render library: https://demo.jakethethe1.repl.co/render.html  
 
 ## Example Code
 ### Counts too a number inputed then counts down to 0.
