@@ -1,7 +1,7 @@
 var librarys = new Map();
 var functions = new Map();
 var functionsBackup = new Map();
-var LANG_INSTRUCTIONS = ["set", "com", "mov", "add", "sub", "jmp", "using"]
+const LANG_INSTRUCTIONS = ["set", "com", "mov", "add", "sub", "jmp", "using"]
 var registers = [0, 0, 0, 0];
 var offset = 0;
 /*
